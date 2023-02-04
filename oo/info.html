@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        var numOne,numTwo,numThree,numFour,numFive,numSix,numSeven,res,temp;
+        function fun()
+        {
+            numOne = parseInt(document.getElementById("one").value);
+            numTwo = parseInt(document.getElementById("two").value);
+            numThree = parseInt(document.getElementById("three").value);
+            numFour = parseInt(document.getElementById("four").value);
+            numFive =  parseInt(document.getElementById("five").value);
+            numSix =  parseInt(document.getElementById("six").value);
+            numSeven =  parseInt(document.getElementById("seven").value);
+            if(numOne && numTwo && numThree && numFour && numFive && numSix && numSeven)
+            {
+                temp = document.getElementById("res");
+                temp.style.display = "block";
+                res = numOne + numTwo + numThree + numFour + numFive + numSix + numSeven;
+                document.getElementById("add").value = res;
+                consoloe.log(res);
+            }
+        }
+
+    </script>
+   
+</head>
+
+<body>
+    <div class="center">
+        
+        <h1>Budget Tracker</h1>
+        <form>
+        <div class="txt">
+        <input type="text">
+        <span></span>
+      <p id="da"><label>Bankloan/EMI:<input id="one"></label>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+        <label>Transportation:<input id="two"></label>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+        <label>Groceries:<input id="three"></label>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+        <label>Car Maintanance:<input id="four"></label>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+        <label>Shopping:<input id="five"></label>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+        <label>Monthly Recharge:<input id="six"></label>
+    </p>
+    </div>
+    <div class="txt">
+        <input type="text">
+        <span></span>
+       <label>Dining out/Food:<input id="seven"></label>
+    
+        
+        <p><button onclick="fun()">Add</button></p>
+        <p ><input id="res" style="display:none;">
+        Total Expense:<input id="add">
+        </p>
+    </div>
+</form>
+    </div>
+</body>
+
+</html>
